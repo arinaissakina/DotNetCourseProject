@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.5.0/build/netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_DotNetFinalProject.-1895512396.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="DotNetFinalProject" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="AccountController.cs" t="Include" />
+          <e p="MainController.cs" t="Include" />
+          <e p="ProjectController.cs" t="Include" />
+          <e p="ProjectMemberController.cs" t="Include" />
+          <e p="RolesController.cs" t="Include" />
+          <e p="SpecialtyController.cs" t="Include" />
+          <e p="SpecialtyUserController.cs" t="Include" />
+          <e p="UsersController.cs" t="Include" />
+        </e>
+        <e p="CourseProject.db" t="Include" />
+        <e p="Data" t="Include">
+          <e p="CourseProjectContext.cs" t="Include" />
+        </e>
+        <e p="DotNetFinalProject.csproj" t="IncludeRecursive" />
+        <e p="Migrations" t="Include">
+          <e p="20201211223136_first.cs" t="Include" />
+          <e p="20201211223136_first.Designer.cs" t="Include" />
+          <e p="CourseProjectContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Project.cs" t="Include" />
+          <e p="ProjectMember.cs" t="Include" />
+          <e p="Specialty.cs" t="Include" />
+          <e p="SpecialtyUser.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="DotNetFinalProject.AssemblyInfo.cs" t="Include" />
+              <e p="DotNetFinalProject.RazorAssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="IProjectRepository.cs" t="Include" />
+          <e p="ISpecialtyRepository.cs" t="Include" />
+          <e p="ProjectRepository.cs" t="Include" />
+          <e p="ProjectService.cs" t="Include" />
+          <e p="SpecialtyRepository.cs" t="Include" />
+          <e p="SpecialtyService.cs" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="ViewModels" t="Include">
+          <e p="ChangeRoleViewModel.cs" t="Include" />
+          <e p="CreateUserViewModel.cs" t="Include" />
+          <e p="LoginViewModel.cs" t="Include" />
+          <e p="RegisterViewModel.cs" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Account" t="Include">
+            <e p="Login.cshtml" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+          </e>
+          <e p="Main" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Project" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="ProjectMember" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Roles" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+            <e p="UserList.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="_LoginPartial.cshtml" t="Include" />
+            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+          </e>
+          <e p="Specialty" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="SpecialtyUser" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Users" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="bulma.min.css" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="DotNetFinalProject.sln" t="IncludeFlat" />
+      <e p="DotNetFinalProjectTest" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DotNetFinalProjectTest.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="DotNetFinalProjectTest.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ProjectServiceTest.cs" t="Include" />
+        <e p="SpecialtyServiceTest.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

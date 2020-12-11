@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Course Project</title>
+    <link rel="stylesheet" href="~/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<br/>
+<div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <strong class="title">Course Project</strong>
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-start">
+            <div class="navbar-item">
+                @Html.ActionLink("Users", "Index", "Users", null, new {@class = "nav-link"})
+            </div>
+            <div class="navbar-item">
+                @Html.ActionLink("Roles", "Index", "Roles", null, new {@class = "nav-link"})</div>
+            <div class="navbar-item">
+                @Html.ActionLink("Projects", "Index", "Project", null, new {@class = "nav-link"})
+            </div>
+            <div class="navbar-item">
+                @Html.ActionLink("Specialties", "Index", "Specialty", null, new {@class = "nav-link"})
+            </div>
+            <div class="navbar-item">
+                @Html.ActionLink("SpecialtiesUsers", "Index", "SpecialtyUser", null, new {@class = "nav-link"})
+            </div>
+            <div class="navbar-item">
+                @Html.ActionLink("ProjectMembers", "Index", "ProjectMember", null, new {@class = "nav-link"})
+            </div>
+        </div>
+        <partial name="_LoginPartial"/>
+    </nav>
+</div>
+
+<div class="container">
+    @RenderBody()
+</div>
+@RenderSection("Scripts", required: false)
+
+
+</body>
+</html>
