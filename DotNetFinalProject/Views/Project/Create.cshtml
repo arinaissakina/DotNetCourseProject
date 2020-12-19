@@ -4,8 +4,11 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Add</h1>
+<br/>
+<br/>
 
+<h1>Create Project</h1>
+<br/>
 <form asp-action="Create" asp-controller="Project" asp-anti-forgery="true">
     <div class="form-group">
         <label>Name</label>
@@ -16,6 +19,6 @@
         <input type="text" class="form-control" asp-for="Project.Description"  />
     </div>
     <div class="form-group">
-        <input type="submit" value="Add" class="btn btn-outline-dark" />
+        <input type="submit" value="Add" class="btn btn-primary" />
     </div>
 </form>

@@ -1,6 +1,9 @@
 @model DotNetFinalProject.ViewModels.RegisterViewModel
 
-<h2>Registration</h2>
+<br/>
+<br/>
+
+<h2 class="title">Registration</h2>
 
 <form method="post" asp-controller="Account" asp-action="Register">
     <div asp-validation-summary="ModelOnly"></div>
@@ -25,6 +28,6 @@
         <span asp-validation-for="PasswordConfirm"></span>
     </div>
     <div>
-        <input type="submit" value="Register" />
+        <input type="submit" value="Register" class="button is-primary" />
     </div>
 </form>

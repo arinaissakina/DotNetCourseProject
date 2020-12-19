@@ -1,6 +1,9 @@
 @model DotNetFinalProject.ViewModels.LoginViewModel
 
-<h2>Sign in</h2>
+<br/>
+<br/>
+
+<h2 class="title">Sign in</h2>
 
 <form method="post" asp-controller="Account" asp-action="Login"
       asp-route-returnUrl="@Model.ReturnUrl">
@@ -20,6 +23,6 @@
         <input asp-for="RememberMe" />
     </div>
     <div>
-        <input type="submit" value="Login" />
+        <input type="submit" value="Login" class="button is-primary"/>
     </div>
 </form>

@@ -2,19 +2,36 @@
     @{
         ViewData["Title"] = "Projects";
     }
-    <div class="text-center">
-        <div>All Projects</div>
-        @if (User.Identity.IsAuthenticated)
-        {
-            <a asp-action="Create" asp-controller="Project">Create New Project</a>
-        }
-            <table class="table">
+
+<br/>
+
+<partial name="_Search" />
+
+
+<br/>
+
+
+<div class="text-center">
+    <div><h2 class="title">Projects</h2></div>
+    <br/>
+    @if (User.Identity.IsAuthenticated)
+            {
+                <a class="button is-primary" asp-action="Create" asp-controller="Project">Create New Project</a>
+            }
+    <br/>
+    <br/>
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
                         <th scope="col">Description</th>
                         <th scope="col">Owner</th>
                         <th scope="col"></th>
+                        <th scope="col"></th>
+                        @if (User.IsInRole("ADMIN"))
+                        {
+                            <th scope="col"></th>
+                        }
                     </tr>
                 </thead>
                 <tbody>
@@ -25,8 +42,12 @@
                             <th scope="row">@Html.DisplayFor(modelItem => item.Name)</th>
                             <td>@Html.DisplayFor(modelItem => item.Description)</td>
                             <td>@Html.DisplayFor(modelItem => item.Owner.Name)</td>
-                            <td><a asp-action="JoinProject" asp-route-id="@item.Id" asp-controller="Project">Join</a></td>
-                           
+                            <td><a class="button is-text" asp-action="Details" asp-route-id="@item.Id">Details</a></td>
+                            <td><a class="button is-primary" asp-action="JoinProject" asp-route-id="@item.Id" asp-controller="Project">Join</a></td>
+                            @if (User.IsInRole("ADMIN"))
+                            {
+                                <td><a class="button is-danger" asp-action="Delete" asp-route-id="@item.Id" asp-controller="Project">Delete</a></td>
+                            }
                         </tr>
                     }
 

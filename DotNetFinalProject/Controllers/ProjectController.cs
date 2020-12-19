@@ -33,6 +33,12 @@ namespace DotNetFinalProject.Controllers
             var projects = await _projectService.GetProjects();
             return View(projects);
         }
+        
+        public async Task<IActionResult> Search(string text)
+        {
+            var searchedProjects = await _projectService.Search(text);
+            return View("Index", searchedProjects);
+        }
 
         // GET: Project/Details/5
         public async Task<IActionResult> Details(long? id)
@@ -203,5 +209,6 @@ namespace DotNetFinalProject.Controllers
             
             return RedirectToAction("MyProjects", "Account");
         }
+        
     }
 }

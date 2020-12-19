@@ -3,34 +3,27 @@
     ViewData["Title"] = "Profile Page";
 }
 
-<h1 class="title"></h1>
-<h1 class="title"></h1>
-<h1 class="title"></h1>
+<br/>
+<br/>
 <h1 class="title">@User.Identity.Name </h1>
-
+<hr />
 <div class="text-center">
-
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">My Specialties</th>
-            <th scope="col"><a asp-controller="Account" asp-action="EditSpecialties">Edit</a></th>
-        </tr>
-        </thead>
-        <tbody>
-
+    <dl class="row">
+        <dt class = "col-sm-2">
+            <b>My Specialties:</b>
+        </dt>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>@Html.DisplayFor(modelItem => item.SpecialtyName)</td>
-            </tr>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(modelItem => item.SpecialtyName)
+            </dd>
         }
-
-        </tbody>
-    </table>
+    </dl>
 </div>
-<h1 class="title"></h1>
-<h1 class="title"></h1>
+<th scope="col"><a asp-controller="Account" asp-action="EditSpecialties">Edit</a></th>
+
+<br />
+<br />
 <div class="buttons">
     <a class="button is-primary" asp-controller="Account" asp-action="MyProjects">My Projects</a>
 </div>

@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Routing;
 
 namespace DotNetFinalProject.Controllers
 {
-    //[Authorize(Roles="ADMIN")]
+    [Authorize(Roles="ADMIN")]
     public class SpecialtyController : Controller
     {
         private readonly SpecialtyService _specialtyService;

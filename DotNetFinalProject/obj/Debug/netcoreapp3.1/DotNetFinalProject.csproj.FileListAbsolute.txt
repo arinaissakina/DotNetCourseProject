@@ -199,3 +199,4 @@
 /Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Account/Profile.cshtml.g.cs
 /Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Account/MyProjects.cshtml.g.cs
 /Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Account/EditSpecialties.cshtml.g.cs
+/Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Search.cshtml.g.cs

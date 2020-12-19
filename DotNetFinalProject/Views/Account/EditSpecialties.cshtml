@@ -3,6 +3,8 @@
     ViewData["Title"] = "Edit";
 }
 
+<br/>
+<br/>
 
 <div class="container">
     <b>Specialties:</b>
@@ -42,4 +44,4 @@
     </tbody>
 </table>
 
-<a asp-action="Profile" asp-route-id="@Model.User.Id" asp-controller="Account">Save</a>
+<a class="button is-primary" asp-action="Profile" asp-route-id="@Model.User.Id" asp-controller="Account">Save</a>

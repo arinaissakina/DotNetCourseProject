@@ -3,15 +3,18 @@
     ViewData["Title"] = "My Projects";
 }
 
+<br/>
+<br/>
 
 <div class="text-center">
-    <div>My Projects</div>
-  
-    <table class="table">
+    <div><h2 class="title">My Projects</h2></div>
+  <br/>
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
         <tr>
             <th scope="col">Name</th>
             <th scope="col">Owner</th>
+            <th scope="col"></th>
             <th scope="col"></th>
         </tr>
         </thead>
@@ -22,7 +25,8 @@
             <tr>
                 <td>@Html.DisplayFor(modelItem => item.ProjectName)</td>
                 <td>@Html.DisplayFor(modelItem => item.ProjectOwner)</td>
-                <td><a asp-action="QuitProject" asp-route-id="@item.ProjectId" asp-controller="Project">Quit Project</a></td>
+                <td><a class="button is-text" asp-action="Details" asp-route-id="@item.ProjectId" asp-controller="Project">Details</a></td>
+                <td><a class="button is-danger" asp-action="QuitProject" asp-route-id="@item.ProjectId" asp-controller="Project">Quit Project</a></td>
             </tr>
         }
 

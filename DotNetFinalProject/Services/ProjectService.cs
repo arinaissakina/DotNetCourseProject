@@ -50,5 +50,16 @@ namespace DotNetFinalProject.Services
             return _projectRepository.Exists(id);
         }
         
+        public async Task<List<Project>> Search(string text)
+        {
+            text = text.ToLower();
+            var searchedMovies = await _projectRepository.GetProjects(p => p.Name.ToLower().Contains(text)
+                                                                     || p.Description.ToLower().Contains(text)
+                                                                     || p.Owner.Name.ToLower().Contains(text));
+
+            return searchedMovies;
+        }
+
+        
     }
 }

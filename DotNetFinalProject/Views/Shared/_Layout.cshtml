@@ -25,21 +25,24 @@
             </a>
         </div>
         <div class="navbar-start">
-            <div class="navbar-item">
-                @Html.ActionLink("Users", "Index", "Users", null, new {@class = "nav-link"})
-            </div>
-            <div class="navbar-item">
-                @Html.ActionLink("Roles", "Index", "Roles", null, new {@class = "nav-link"})</div>
-            <div class="navbar-item">
-                @Html.ActionLink("Projects", "Index", "Project", null, new {@class = "nav-link"})
-            </div>
-            <div class="navbar-item">
-                @Html.ActionLink("Specialties", "Index", "Specialty", null, new {@class = "nav-link"})
-            </div>
-            <div class="navbar-item">
-                @Html.ActionLink("SpecialtiesUsers", "Index", "SpecialtyUser", null, new {@class = "nav-link"})
-            </div>
+        <div class="navbar-item">
+                                        @Html.ActionLink("Projects", "Index", "Project", null, new {@class = "nav-link"})
+                        </div>
+            @if (User.IsInRole("ADMIN"))
+            {
+                <div class="navbar-item">
+                    @Html.ActionLink("Users", "Index", "Users", null, new {@class = "nav-link"})
+                </div>
+
+                <div class="navbar-item">
+                    @Html.ActionLink("Roles", "Index", "Roles", null, new {@class = "nav-link"})</div>
+                
+                <div class="navbar-item">
+                    @Html.ActionLink("Specialties", "Index", "Specialty", null, new {@class = "nav-link"})
+                </div>
+            }
             
+
         </div>
         <partial name="_LoginPartial"/>
     </nav>

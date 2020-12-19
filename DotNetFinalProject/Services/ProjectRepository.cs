@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using DotNetFinalProject.Data;
 using DotNetFinalProject.Models;
@@ -51,6 +53,11 @@ namespace DotNetFinalProject.Services
         public bool Exists(long? id)
         {
             return _context.Projects.Any(e => e.Id == id);
+        }
+            
+        public  Task<List<Project>> GetProjects(Expression<Func<Project, bool>> predicate)
+        {
+            return  _context.Projects.Where(predicate).Include(p => p.Owner).ToListAsync();
         }
     }
 }

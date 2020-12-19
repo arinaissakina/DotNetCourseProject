@@ -1,6 +1,8 @@
 @model IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>
  
-<h2>Roles</h2>
+<br/>
+<br/>
+
 <table class="table">
     @foreach (var role in Model)
     {
@@ -16,5 +18,5 @@
         </tr>
     }
 </table>
-<a asp-action="Create">Add Role</a>
-<a asp-action="UserList">List of Users</a>
+<a class="button is-primary" asp-action="Create">Add Role</a>
+<a class="button is-light" asp-action="UserList">List of Users</a>
