@@ -8,18 +8,23 @@ using Microsoft.EntityFrameworkCore;
 using DotNetFinalProject.Data;
 using DotNetFinalProject.Models;
 using DotNetFinalProject.Services;
+using DotNetFinalProject.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Routing;
 
 namespace DotNetFinalProject.Controllers
 {
-    [Authorize(Roles="ADMIN")]
+    //[Authorize(Roles="ADMIN")]
     public class SpecialtyController : Controller
     {
         private readonly SpecialtyService _specialtyService;
+        private readonly CourseProjectContext _context;
 
-        public SpecialtyController(SpecialtyService specialtyService)
+        public SpecialtyController(SpecialtyService specialtyService, CourseProjectContext context)
         {
             _specialtyService = specialtyService;
+            _context = context;
+
         }
 
         // GET: Specialty
@@ -147,5 +152,7 @@ namespace DotNetFinalProject.Controllers
         {
             return _specialtyService.SpecialtyExist(id);
         }
+        
+        
     }
 }

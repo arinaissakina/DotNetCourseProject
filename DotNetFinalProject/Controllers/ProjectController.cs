@@ -8,6 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using DotNetFinalProject.Data;
 using DotNetFinalProject.Models;
 using DotNetFinalProject.Services;
+using DotNetFinalProject.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.CodeAnalysis;
+using Project = DotNetFinalProject.Models.Project;
 
 namespace DotNetFinalProject.Controllers
 {
@@ -49,7 +54,7 @@ namespace DotNetFinalProject.Controllers
         // GET: Project/Create
         public IActionResult Create()
         {
-            ViewData["OwnerId"] = new SelectList(_context.AllUsers, "Id", "Name");
+            //ViewData["OwnerId"] = new SelectList(_context.AllUsers, "Id", "Name");
             return View();
         }
 
@@ -58,16 +63,21 @@ namespace DotNetFinalProject.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,OwnerId")] Project project)
+        public async Task<IActionResult> Create(ProjectViewModel model)
         {
-            if (ModelState.IsValid)
-            {
-                await _projectService.CreateProject(project);
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["OwnerId"] = new SelectList(_context.AllUsers, "Id", "Name", project.OwnerId);
-            return View(project);
+            
+                var userEmail = User.Identity.Name;
+                User user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+                Project project = new Project()
+                    {OwnerId = user.Id, Name = model.Project.Name, Description = model.Project.Description};
+                _context.Projects.Add(project);
+                await _context.SaveChangesAsync();
+                _context.ProjectMembers.Add(new ProjectMember {ProjectId = project.Id, MemberId = user.Id});
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Index", "Project");
         }
+        
 
         // GET: Project/Edit/5
         public async Task<IActionResult> Edit(long? id)
@@ -151,6 +161,47 @@ namespace DotNetFinalProject.Controllers
         private bool ProjectExists(long id)
         {
             return _projectService.ProjectExist(id);
+        }
+        
+        
+        //[Authorize(Roles = "USER")]
+        [HttpGet]
+        [Route("/Project/JoinProject/{id}")]
+        public async Task<IActionResult> JoinProject(long id)
+        {
+            var userEmail = User.Identity.Name;
+            User user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+            
+            var project = await _context.Projects.FirstOrDefaultAsync(c => c.Id == id);
+            var projectMembers = await _context.ProjectMembers.FirstOrDefaultAsync(b => b.MemberId == user.Id && b.ProjectId == id);
+            
+            if (projectMembers == null)
+            {
+                _context.ProjectMembers.Add(new ProjectMember { ProjectId = id, MemberId = user.Id });
+                await _context.SaveChangesAsync();
+            }
+      
+            return RedirectToAction("Index", "Project");
+        }
+        
+        //[Authorize(Roles = "USER")]
+        [HttpGet]
+        [Route("/Project/QuitProject/{id}")]
+        public async Task<IActionResult> QuitProject(long id)
+        {
+            var userEmail = User.Identity.Name;
+            User user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
+            
+            var project = await _context.Projects.FirstOrDefaultAsync(c => c.Id == id);
+            var projectMembers = await _context.ProjectMembers.FirstOrDefaultAsync(b => b.MemberId == user.Id && b.ProjectId == id);
+            
+            if (projectMembers != null)
+            {
+                _context.ProjectMembers.Remove(projectMembers);
+                await _context.SaveChangesAsync();
+            }
+            
+            return RedirectToAction("MyProjects", "Account");
         }
     }
 }

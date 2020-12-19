@@ -1,0 +1,36 @@
+@model IEnumerable<DotNetFinalProject.ViewModels.ProfileViewModel>
+@{
+    ViewData["Title"] = "Profile Page";
+}
+
+<h1 class="title"></h1>
+<h1 class="title"></h1>
+<h1 class="title"></h1>
+<h1 class="title">@User.Identity.Name </h1>
+
+<div class="text-center">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">My Specialties</th>
+            <th scope="col"><a asp-controller="Account" asp-action="EditSpecialties">Edit</a></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.SpecialtyName)</td>
+            </tr>
+        }
+
+        </tbody>
+    </table>
+</div>
+<h1 class="title"></h1>
+<h1 class="title"></h1>
+<div class="buttons">
+    <a class="button is-primary" asp-controller="Account" asp-action="MyProjects">My Projects</a>
+</div>

@@ -1,0 +1,45 @@
+@model DotNetFinalProject.ViewModels.EditSpecialtyViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div class="container">
+    <b>Specialties:</b>
+    <ul>
+        @foreach (var specialty in Model.Specialties)
+        {
+            @foreach (var specialtyUser in Model.SpecialtyUsers)
+            {
+                @if (specialtyUser.SpecialtyId == specialty.Id)
+                {
+                    <li>@specialty.Name</li>
+                }
+            }
+        }
+    </ul>
+</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Specialty</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+
+    @foreach (var item in Model.Specialties)
+    {
+        <tr>
+            <th scope="row">@item.Name</th>
+            <td><a asp-action="AddSpecialty" asp-route-id="@item.Id" asp-route-bookid="@Model.User.Id" asp-controller="Account">Add</a></td>
+            <td><a asp-action="RemoveSpecialty" asp-route-id="@item.Id" asp-route-bookid="@Model.User.Id" asp-controller="Account">Remove</a></td>
+        </tr>
+    }
+
+    </tbody>
+</table>
+
+<a asp-action="Profile" asp-route-id="@Model.User.Id" asp-controller="Account">Save</a>

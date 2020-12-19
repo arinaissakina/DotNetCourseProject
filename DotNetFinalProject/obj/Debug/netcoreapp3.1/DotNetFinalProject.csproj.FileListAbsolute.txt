@@ -159,11 +159,6 @@
 /Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Project/Details.cshtml.g.cs
 /Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Project/Edit.cshtml.g.cs
 /Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Project/Index.cshtml.g.cs
-/Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/ProjectMember/Create.cshtml.g.cs
-/Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/ProjectMember/Delete.cshtml.g.cs
-/Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/ProjectMember/Details.cshtml.g.cs
-/Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/ProjectMember/Edit.cshtml.g.cs
-/Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/ProjectMember/Index.cshtml.g.cs
 /Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Roles/Create.cshtml.g.cs
 /Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Roles/Edit.cshtml.g.cs
 /Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Roles/Index.cshtml.g.cs
@@ -201,3 +196,6 @@
 /Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll
 /Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/bin/Debug/netcoreapp3.1/Castle.Core.dll
 /Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/bin/Debug/netcoreapp3.1/Moq.dll
+/Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Account/Profile.cshtml.g.cs
+/Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Account/MyProjects.cshtml.g.cs
+/Users/arina/RiderProjects/DotNetFinalProject/DotNetFinalProject/obj/Debug/netcoreapp3.1/Razor/Views/Account/EditSpecialties.cshtml.g.cs

@@ -15,4 +15,12 @@
       <PackageReference Include="Moq" Version="4.13.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\ProjectMember\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ProjectMember\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ProjectMember\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ProjectMember\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ProjectMember\Index.cshtml" />
+    </ItemGroup>
+
 </Project>

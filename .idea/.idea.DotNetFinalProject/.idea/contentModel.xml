@@ -18,7 +18,6 @@
           <e p="AccountController.cs" t="Include" />
           <e p="MainController.cs" t="Include" />
           <e p="ProjectController.cs" t="Include" />
-          <e p="ProjectMemberController.cs" t="Include" />
           <e p="RolesController.cs" t="Include" />
           <e p="SpecialtyController.cs" t="Include" />
           <e p="SpecialtyUserController.cs" t="Include" />
@@ -30,8 +29,8 @@
         </e>
         <e p="DotNetFinalProject.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
-          <e p="20201211223136_first.cs" t="Include" />
-          <e p="20201211223136_first.Designer.cs" t="Include" />
+          <e p="20201219101614_first.cs" t="Include" />
+          <e p="20201219101614_first.Designer.cs" t="Include" />
           <e p="CourseProjectContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -65,27 +64,27 @@
         <e p="ViewModels" t="Include">
           <e p="ChangeRoleViewModel.cs" t="Include" />
           <e p="CreateUserViewModel.cs" t="Include" />
+          <e p="EditSpecialtyViewModel.cs" t="Include" />
           <e p="LoginViewModel.cs" t="Include" />
+          <e p="MyProjectsViewModel.cs" t="Include" />
+          <e p="ProfileViewModel.cs" t="Include" />
+          <e p="ProjectViewModel.cs" t="Include" />
           <e p="RegisterViewModel.cs" t="Include" />
         </e>
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
           <e p="Account" t="Include">
+            <e p="EditSpecialties.cshtml" t="Include" />
             <e p="Login.cshtml" t="Include" />
+            <e p="MyProjects.cshtml" t="Include" />
+            <e p="Profile.cshtml" t="Include" />
             <e p="Register.cshtml" t="Include" />
           </e>
           <e p="Main" t="Include">
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Project" t="Include">
-            <e p="Create.cshtml" t="Include" />
-            <e p="Delete.cshtml" t="Include" />
-            <e p="Details.cshtml" t="Include" />
-            <e p="Edit.cshtml" t="Include" />
-            <e p="Index.cshtml" t="Include" />
-          </e>
-          <e p="ProjectMember" t="Include">
             <e p="Create.cshtml" t="Include" />
             <e p="Delete.cshtml" t="Include" />
             <e p="Details.cshtml" t="Include" />
